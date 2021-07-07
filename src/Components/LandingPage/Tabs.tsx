@@ -3,11 +3,10 @@ import React from "react";
 interface Props {
   title: string;
   src: string;
-  //   children: React.ReactNode;
 }
 
-const Tabs: React.FC<Props> = ({ children }) => {
-  return <>{children}</>;
+const Tabs: React.FC<Props> = () => {
+  return <></>;
 };
 
 Tabs.defaultProps = {};

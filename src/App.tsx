@@ -13,11 +13,11 @@ const App: React.FC<Props> = (props) => {
   return (
     <div>
       <TabList>
-        <Tabs title="50" src={coffeeMug}></Tabs>
-        <Tabs title="150" src={blackCoffee}></Tabs>
-        <Tabs title="200" src={pinkJuice}></Tabs>
-        <Tabs title="400" src={food}></Tabs>
-        <Tabs title="600" src={packetRice}></Tabs>
+        <Tabs title="50" src={coffeeMug} />
+        <Tabs title="150" src={blackCoffee} />
+        <Tabs title="200" src={pinkJuice} />
+        <Tabs title="400" src={food} />
+        <Tabs title="600" src={packetRice} />
       </TabList>
     </div>
   );
