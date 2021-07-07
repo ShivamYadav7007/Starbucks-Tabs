@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import blackCoffee from "./Images/blackCoffee.webp";
+import coffeeMug from "./Images/coffeeMug.webp";
+import food from "./Images/food.webp";
+import packetRice from "./Images/packetRice.webp";
+import pinkJuice from "./Images/pinkJuice.webp";
+import TabList from "./Components/LandingPage/TabList";
+import Tabs from "./Components/LandingPage/Tabs";
 
-function App() {
+interface Props {}
+
+const App: React.FC<Props> = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TabList>
+        <Tabs title="50" src={coffeeMug}></Tabs>
+        <Tabs title="150" src={blackCoffee}></Tabs>
+        <Tabs title="200" src={pinkJuice}></Tabs>
+        <Tabs title="400" src={food}></Tabs>
+        <Tabs title="600" src={packetRice}></Tabs>
+      </TabList>
     </div>
   );
-}
+};
 
-export default App;
+App.defaultProps = {};
+
+export default React.memo(App);
