@@ -32,11 +32,15 @@ const TabList: React.FC<Props> = ({ children }) => {
           </div>
           <div
             className={`absolute -mt-1 h-1 ease-in-out duration-300 bg-secondary`}
-            style={{ width: starWidth + "%", left: starWidth * iNumber + "%" }}
+            style={{
+              width: starWidth + "%",
+              // left: `${starWidth * iNumber}%`,  //using left
+              transform: `translateX(${100 * iNumber}%)`, // using transform
+            }}
           ></div>
         </div>
       </div>
-      <div className="relative bg-primary-light">
+      <div className="relative bg-primary-light h-72">
         {children.map((child, index) => {
           return (
             <Transition.Root
